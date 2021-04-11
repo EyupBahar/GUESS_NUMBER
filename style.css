@@ -50,13 +50,13 @@ input,input::-webkit-inner-spin-button{
     margin-bottom: -3%;
     height:60%
 }
-#result{
+#answer{
     font-size: 1.5em;
     font-style:oblique;
     color:brown;
     font-weight: bolder;
 }
-#footer{
+#answer, #count{
     font-size: 1.5em;
     font-style: italic;
     color:brown;

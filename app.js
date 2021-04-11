@@ -1,18 +1,27 @@
 let btn = document.querySelector("#btn")
-let result = document.getElementById("result");
+let anwer = document.getElementById("answer");
+let counter = 0;
+let count = document.getElementById("count");
 let wanted = parseInt(100*Math.random());
-btn.addEventListener("click",find)
-function find(){
+let input = document.getElementById("num");
+num.addEventListener("keyup", function(event){
+    if(event.code == "Enter" || event.code == "NumpadEnter"){
+        checkedNumber();
+    }
+})
+btn.addEventListener("click",checkedNumber);
+function checkedNumber(){
     let num  = document.getElementById("num").value;
+    counter++;
+    count.innerHTML = "Number of attemps: " + counter;
     console.log(wanted);
-    console.log(result);
+    console.log(answer);
     console.log(num)
         if (parseInt(num) === wanted){
-            result.textContent = "Congrats!!";
+            answer.textContent = "Congrats!!";
         }else if (parseInt(num) < wanted){
-            result.textContent = "Try Higher Numbers!!";
+            answer.textContent = "Try Higher Numbers!!";
         }else if (parseInt(num) > wanted){
-            result.textContent = "Try Lower Numbers!!";
-        }
-    // location.reload();
-    }
+            answer.textContent = "Try Lower Numbers!!";
+        }    // location.reload();
+}
